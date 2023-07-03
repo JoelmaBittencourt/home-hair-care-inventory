@@ -1,9 +1,9 @@
 package com.homeHairCareInventory.model;
 
+import com.homeHairCareInventory.model.dto.ProductDto;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Entity
 @Table(name = "PRODUCT")
@@ -25,6 +25,24 @@ public class Product {
     private String descricao;
     private Boolean ativo;
     private LocalDate dataCompra;
+
+
+    public Product() {
+    }
+
+    public Product(ProductDto dto) {
+        this.nome = dto.nome();
+        this.preco = dto.preco();
+        this.quantidade = dto.quantidade();
+        this.tamanho = dto.tamanho();
+        this.validade = dto.validade();
+        this.localDeCompra = dto.localDeCompra();
+        this.tipoProduto = dto.tipoProduto();
+        this.marca = dto.marca();
+        this.descricao = dto.descricao();
+        this.dataCompra = dto.dataCompra();
+    }
+
 
     public Integer getCode() {
         return code;
