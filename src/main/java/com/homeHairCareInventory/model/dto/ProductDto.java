@@ -9,6 +9,7 @@ public record ProductDto(
         String nome,
         double preco,
         int tamanho,
+        int quantidade,
         LocalDate validade,
         String localDeCompra,
         Tipo tipoProduto,
