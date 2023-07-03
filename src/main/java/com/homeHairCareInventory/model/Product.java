@@ -11,7 +11,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID code;
+    private Integer code;
     private String nome;
     private double preco;
     private int quantidade;
@@ -26,7 +26,7 @@ public class Product {
     private Boolean ativo;
     private LocalDate dataCompra;
 
-    public UUID getCode() {
+    public Integer getCode() {
         return code;
     }
 
