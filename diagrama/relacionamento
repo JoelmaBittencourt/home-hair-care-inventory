@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" modified="2023-07-05T15:20:59.084Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="FzDnsHpvHE0hiRyBbrdM" version="21.4.0" type="github">
+  <diagram name="Página-1" id="DSyYsyZQRViEdVR8fX-C">
+    <mxGraphModel dx="908" dy="1535" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QhdxXhX5nKUSDUnqJTL9-1" target="QhdxXhX5nKUSDUnqJTL9-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QhdxXhX5nKUSDUnqJTL9-1" target="QhdxXhX5nKUSDUnqJTL9-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-2" value="Controller/resource" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="70" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-3" value="service" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="70" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-4" value="repository" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="70" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-5" value="Entity/model" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="445" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="QhdxXhX5nKUSDUnqJTL9-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-6" value="&lt;h1&gt;Relacionamento de clsses&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Controller recebe uma requisiçao,&lt;/div&gt;&lt;div&gt;Compara os dados recebidos com um dto/model/entity,&lt;/div&gt;&lt;div&gt;Faz as validações dos dados recebidos na classe service,&lt;/div&gt;&lt;div&gt;EStando tudo certo&amp;nbsp; converte esses dados para uma entidade, salva no banco de dados a Entity/model usando um repository,&lt;/div&gt;&lt;div&gt;retorna uma resposta para quem fez&amp;nbsp; a requisição&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="190" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-7" value="postman" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="55" y="-40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-10" value="Recebe os dados, compara com o que espera, converte para salvar no banco e retorn uma resposta" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="-20" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-11" value="com base nos dados recebidos faz validações das regras de negocio, usando repository&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="525" y="-20" width="110" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-12" value="faz a conexão entre o banco de dados e a entidade" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="365" y="-20" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-13" value="Todos os dados que pretendo salvar no banco de dados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="140" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-14" value="dto" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QhdxXhX5nKUSDUnqJTL9-15" value="classes de dados transitorio ex se tenho 10 dados&amp;nbsp; na entidade e quero retornar 2 pro cliente faço através de um dto" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="10" width="150" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
