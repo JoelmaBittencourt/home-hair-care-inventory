@@ -91,4 +91,18 @@ public class Product {
     public LocalDate getDataCompra() {
         return dataCompra;
     }
-}
+
+        public void excluir() {
+            this.ativo = false;
+
+        }
+
+
+        public void atualizarInformacoes(ProductDto dados) {
+            if (dados.code() != null) {
+                this.quantidade = dados.quantidade();
+            }
+        }
+
+        }
+
