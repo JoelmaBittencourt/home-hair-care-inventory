@@ -44,6 +44,17 @@ dependencies {
 
 }
 
+pmd {
+ruleSetFiles = files("$projectDir/pmd.xml")
+isIgnoreFailures = true
+}
+
+checkstyle {
+configFile = file("$projectDir/./checkstyle.xml")
+isIgnoreFailures = true
+}
+
+
 tasks.withType<Test> {
-    useJUnitPlatform()
+useJUnitPlatform()
 }
