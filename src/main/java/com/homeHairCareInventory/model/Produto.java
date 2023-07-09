@@ -1,13 +1,13 @@
 package com.homeHairCareInventory.model;
 
-import com.homeHairCareInventory.model.dto.ProductDto;
+import com.homeHairCareInventory.model.dto.ProdutoDto;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "PRODUCT")
-public class Product {
+public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,10 +27,10 @@ public class Product {
     private LocalDate dataCompra;
 
 
-    public Product() {
+    public Produto() {
     }
 
-    public Product(ProductDto dto) {
+    public Produto(ProdutoDto dto) {
         this.nome = dto.nome();
         this.preco = dto.preco();
         this.quantidade = dto.quantidade();
@@ -98,11 +98,10 @@ public class Product {
         }
 
 
-        public void atualizarInformacoes(ProductDto dados) {
+        public void atualizarInformacoes(ProdutoDto dados) {
             if (dados.code() != null) {
                 this.quantidade = dados.quantidade();
             }
         }
 
         }
-
