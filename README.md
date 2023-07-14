@@ -1,5 +1,9 @@
 # Home Hair Care Inventory
 
+![img.png](img.png)
+
+
+
 O Home Hair Care Inventory é um sistema para gerenciar o estoque de produtos para cuidados com o cabelo e pele.
 
 ## Tecnologias Utilizadas
@@ -54,3 +58,5 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "descricao": "Descrição do produto",
   "dataCompra": "2023-07-03"
 }' http://localhost:8080/api/produto
+
+

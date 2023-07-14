@@ -5,32 +5,29 @@ import com.homeHairCareInventory.model.dto.ProdutoDto;
 import com.homeHairCareInventory.repository.ProdutoRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/producto")
+@RequestMapping("/product")
 public class ProdutoController {
 
     @Autowired
     ProdutoRepository produtoRepository;
 
-    @PostMapping("post")
+    @PostMapping
     public void create(@RequestBody ProdutoDto dto) {
         produtoRepository.save(new Produto(dto));
     }
 
-    @PostMapping
-    public ResponseEntity<Produto> saveProduct(@RequestBody @Valid ProdutoDto produtoDto) {
-        var product = new Produto();
-        BeanUtils.copyProperties(produtoDto, product);
-        return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(product));
-    }
+//    @PostMapping
+//    public ResponseEntity<Produto> saveProduct(@RequestBody @Valid ProdutoDto produtoDto) {//dados nulos
+//        var product = new Produto();
+//        BeanUtils.copyProperties(produtoDto, product);
+//        return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(product));
+//    }
 
     @GetMapping
     public List<ProdutoDto> listar() {
@@ -40,8 +37,8 @@ public class ProdutoController {
     @PutMapping
     @Transactional
     public void atualizar(@RequestBody @Valid ProdutoDto dados) {
-        var medico = produtoRepository.getReferenceById(dados.code());
-        medico.atualizarInformacoes(dados);
+        var produto = produtoRepository.getReferenceById(dados.code());
+        produto.atualizarInformacoes(dados);
     }
 
     @DeleteMapping("/{id}")
